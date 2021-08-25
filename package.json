@@ -1,0 +1,33 @@
+{
+  "name": "recommendations-broker",
+  "version": "0.1.0",
+  "description": "Akkeris recommendations broker",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_EXTRA_CA_CERTS=./DigiCertSHA2HighAssuranceServerCA.pem node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akkeris/recommendations-broker.git"
+  },
+  "author": "Sam Beckett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akkeris/recommendations-broker/issues"
+  },
+  "homepage": "https://github.com/akkeris/recommendations-broker#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bree": "^6.2.0",
+    "cabin": "^9.0.4",
+    "express": "^4.17.1",
+    "signale": "^1.4.0",
+    "tiny-async-pool": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.2"
+  }
+}
