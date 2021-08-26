@@ -33,7 +33,7 @@ module.exports = {
     {
       name: 'Get Resize Actions',
       filename: 'getResizeActions.js',
-      interval: '20s',
+      interval: '30m',
     },
   ],
   service: 'turbonomic',
