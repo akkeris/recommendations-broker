@@ -74,3 +74,4 @@ To add a new service that provides recommendations, create a new folder under th
 The individual job files (referenced in the `jobs` array) should be placed in a `jobs` folder, which should be nested under the new service folder in the `services` directory.
 
 For an example of this structure, take a look at the `services/turbonomic` directory.
+
