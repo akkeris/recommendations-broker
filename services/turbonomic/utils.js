@@ -39,7 +39,7 @@ async function searchForApp(app, space, cluster, turboCookie) {
   const params = {
     regex: true,
     types: 'WorkloadController',
-    probe_types: `Kubernetes-${cluster}`,
+    probe_types: 'Kubernetes',
     q: `${app}(--.*)?`, // (--.*)? indicates include all formation types in the search
   };
 
@@ -47,6 +47,9 @@ async function searchForApp(app, space, cluster, turboCookie) {
     let { data: searchResults } = await axios.get(searchEndpoint, {
       params, headers: { Cookie: turboCookie },
     });
+
+    // Filter by cluster
+    searchResults = searchResults.filter((wc) => wc.discoveredBy.displayName === `Kubernetes-${cluster}`);
 
     // Filter by namespace
     searchResults = searchResults.filter((wc) => (
